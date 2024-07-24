@@ -11,7 +11,7 @@ const Log = () => {
     <Container className='sm:text-xs md:text-sm'>
       <div className="px-6">
         <h3 className="text-xl mb-4">Transaction Receipt Event Logs</h3>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           <p className="text-customGreen bg-customGreen/15 p-4 w-14 h-14 rounded-full">
             136
           </p>
@@ -36,7 +36,7 @@ const Log = () => {
             {/* s */}
             <div className="lg:flex lg:flex-wrap place-items-center gap-10 text-gray-500">
               <h4 className="font-semibold w-24 ">Name</h4>
-              <p className="tracking-wide font-mono">
+              <p className="tracking-wide font-mono break-all">
                 Transfer (index_topic_1{' '}
                 <span className="text-customGreen">address</span>{' '}
                 <span className="text-red-600">from</span>, index_topic_2

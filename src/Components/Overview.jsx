@@ -9,6 +9,7 @@ import { FaCaretRight } from 'react-icons/fa'
 import { IoDocumentTextOutline } from 'react-icons/io5'
 import { FaEthereum } from 'react-icons/fa6'
 import { FaPlus } from 'react-icons/fa6'
+import classNames from 'classnames'
 const Title = ({ label }) => {
   return (
     <div className="flex gap-2 items-center md:min-w-[20rem]">
@@ -81,7 +82,7 @@ const Overview = () => {
                   {' '}
                   4,003
                 </span> ($4,003.00){' '}
-                <span className="text-customBlue inline hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2 ">
+                <span className="text-customBlue inline hover:bg-orange-100 hover:border hover:border-orange-500 hover:border-dashed hover:rounded-md px-2 ">
                   <img
                     src="https://etherscan.io/token/images/tethernew_32.png"
                     alt=""
@@ -91,7 +92,7 @@ const Overview = () => {
                 </span>{' '}
                 To
               </p>
-              <p className="text-sm text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2">
+              <p className="text-sm text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:border-dashed hover:rounded-md px-2">
                 0xED0d99929879a68268Ae3af077440ca554A10D4D
               </p>
             </div>
@@ -108,7 +109,7 @@ const Overview = () => {
           <div className="flex place-items-center gap-1 flex-wrap">
             <p
               className="text-sm 
-             text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2"
+             text-customBlue break-all hover:bg-orange-100 hover:border  hover:border-dashed  hover:border-orange-500 hover:rounded-md px-2"
             >
               0x9a515df66a6A078f10e45a050e0c06b79fa3CCcf
             </p>
@@ -123,7 +124,7 @@ const Overview = () => {
               <IoDocumentTextOutline className="text-sm text-gray-400" />
               <p
                 className="text-sm 
-             text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2"
+             text-customBlue break-all hover:bg-orange-100 hover:border hover:border-dashed  hover:border-orange-500 hover:rounded-md px-2"
               >
                 0x9a515df66a6A078f10e45a050e0c06b79fa3CCcf
               </p>
@@ -141,17 +142,29 @@ const Overview = () => {
           <div className="flex  flex-col gap-1 flex-wrap">
             <div className="flex gap-2 ml-4 md:ml-0">
               <button
-                className={`bg-gray-200 px-2 py-1  rounded-md text-sm ${
-                  tab === 'all' && ' text-white'
-                } ${tab === 'all' && ' bg-blue-500'}  `}
+                className={classNames(
+                  'bg-gray-200 px-2 py-1 rounded-md text-sm',
+                  {
+                    'text-white': tab === 'all',
+                  }
+                )}
+                style={{
+                  backgroundColor: tab === 'all' ? '#0784c3' : '#e5e7eb',
+                }}
                 onClick={() => setTab('all')}
               >
                 All Transfers
               </button>
               <button
-                className={`bg-gray-200 px-2 py-1  rounded-md text-sm ${
-                  tab === 'net' && ' text-white'
-                } ${tab === 'net' && ' bg-blue-500'}`}
+                className={classNames(
+                  'bg-gray-200 px-2 py-1 rounded-md text-sm',
+                  {
+                    'text-white': tab === 'net',
+                  }
+                )}
+                style={{
+                  backgroundColor: tab === 'net' ? '#0784c3' : '#e5e7eb',
+                }}
                 onClick={() => setTab('net')}
               >
                 Net Transfers
@@ -188,11 +201,11 @@ const Overview = () => {
               ) : (
                 <div className="text-sm flex gap-2 flex-col">
                   <div>
-                    <p className="text-sm text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2 inline">
+                    <p className="text-sm text-customBlue break-all hover:bg-orange-100 hover:border  hover:border-dashed  hover:border-orange-500 hover:rounded-md px-2 inline">
                       0x9a515df6...79fa3CCcf
                     </p>
                     <span className="text-black inline"> sent 4,003 </span>{' '}
-                    <span className="text-customBlue inline hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2 ">
+                    <span className="text-customBlue inline hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-md px-2 ">
                       <img
                         src="https://etherscan.io/token/images/tethernew_32.png"
                         alt=""
@@ -202,11 +215,11 @@ const Overview = () => {
                     </span>{' '}
                   </div>
                   <div>
-                    <p className="text-sm text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2 inline">
+                    <p className="text-sm text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-md px-2 inline">
                       0x9a515df6...79fa3CCcf
                     </p>
                     <span className="text-black inline"> received 4,003 </span>{' '}
-                    <span className="text-customBlue inline hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md px-2 ">
+                    <span className="text-customBlue inline hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-md px-2 ">
                       <img
                         src="https://etherscan.io/token/images/tethernew_32.png"
                         alt=""
@@ -265,12 +278,11 @@ const Overview = () => {
       <Container>
         <div className="flex flex-wrap align-items-center justify-between gap-2 my-4 ">
           <Title label="More Details:" />
-          
-            <button className="flex place-items-center text-customBlue" >
-              <FaPlus className='cursor-pointer' /> Click to show more
-            </button>
-          </div>
-        
+
+          <button className="flex place-items-center text-customBlue">
+            <FaPlus className="cursor-pointer" /> Click to show more
+          </button>
+        </div>
       </Container>
       {/*  */}
       <Container>

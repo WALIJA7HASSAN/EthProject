@@ -8,7 +8,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const Log = () => {
   return (
-    <Container className='sm:text-xs md:text-sm'>
+    <Container className="sm:text-xs md:text-sm">
       <div className="px-6">
         <h3 className="text-xl mb-4">Transaction Receipt Event Logs</h3>
         <div className="flex gap-4 flex-wrap">
@@ -21,7 +21,7 @@ const Log = () => {
             <div className="lg:flex lg:flex-wrap place-items-center gap-10">
               <h4 className="font-semibold w-24 ">Address</h4>
               <div className="flex gap-1 place-items-center flex-wrap text-gray-400 ">
-                <p className=" text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-md  inline">
+                <p className=" text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-md  inline">
                   Tether: USDT Stablecoin
                 </p>
                 <FaRegCopy />
@@ -66,7 +66,7 @@ const Log = () => {
                     Dec
                     <IoIosArrowDown />
                   </span>
-                  <p className=" text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-full px-2   flex flex-wrap place-items-center gap-1 text-sm">
+                  <p className=" text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-full px-2   flex flex-wrap place-items-center gap-1 text-sm">
                     <FaLongArrowAltRight className="text-gray-400" />
                     0x9a515df66a6A078f10e45a050e0c06b79fa3CCcf
                   </p>
@@ -79,7 +79,7 @@ const Log = () => {
                     Dec
                     <IoIosArrowDown />
                   </span>
-                  <p className=" text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-full px-2   flex flex-wrap place-items-center gap-1 text-sm">
+                  <p className=" text-customBlue break-all hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-full px-2   flex flex-wrap place-items-center gap-1 text-sm">
                     <FaLongArrowAltRight className="text-gray-300 " />
                     0x9a515df66a6A078f10e45a050e0c06b79fa3CCcf
                   </p>
@@ -91,13 +91,13 @@ const Log = () => {
               <h4 className="font-semibold w-24 ">Data</h4>
               <div className="bg-gray-100 p-2 rounded-md flex align-items-center justify-between px-2 py-4 flex-grow">
                 <p className="text-gray-500">
-                  value: <span className="text-black font-semibold">4003000000</span>
+                  value:{' '}
+                  <span className="text-black font-semibold">4003000000</span>
                 </p>
 
-                <div className=''>
-                    <button className='bg-gray-400 px-2 rounded-l-md'>Dec</button>
-                    <button className='bg-gray-200 px-2 rounded-r-md'>Hex</button>
-                    
+                <div className="">
+                  <button className="bg-gray-400 px-2 rounded-l-md">Dec</button>
+                  <button className="bg-gray-200 px-2 rounded-r-md">Hex</button>
                 </div>
               </div>
             </div>

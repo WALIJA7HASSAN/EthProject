@@ -13,14 +13,16 @@ const Dropdown = ({ label, items, isOpen, toggleDropdown }) => {
       </div>
       {isOpen && (
         <div
-          className="min-w-[18rem] z-[99] right-0 bg-white absolute mt-3 text-[.78515625rem] p-4 rounded-[0.5rem]"
-          style={{ boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.15)' }}
+          className={`min-w-[18rem] z-[99] mx-auto sm:absolute sm:right-0 bg-white mt-3 text-[.78515625rem] p-4 rounded-[0.5rem] ${
+            window.innerWidth < 640 ? 'fixed left-10 right-10' : ''
+          } ${window.innerWidth < 340 ? 'fixed left-6 right-6' : ''}`}
+          style={{ boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.15) ' }}
         >
           <div className="text-end text-[10.05px] text-[#6c757d] mt-n2 mb-1">
             Sponsored
           </div>
           {items.map((item, index) => (
-            <React.Fragment key={index}>
+            <React.Fragment key={index} className="dropdownList ">
               <span className="text-[#6c757d]">
                 <a href="#" className="text-dark">
                   <div className="inline-flex items-center gap-2 mt-2">

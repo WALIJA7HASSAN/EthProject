@@ -3,11 +3,20 @@ import Dropdown from './Dropdown.jsx'
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 import TransactionsContainer from './TransactionsContainer.jsx'
+import moonpayImg from '../assets/moonpay_20.webp'
+import metamaskImg from '../assets/cons_20.webp'
+import nexoImg from '../assets/nexo.webp'
+import cexioImg from '../assets/cexio_20.svg'
+import coinsgameImg from '../assets/coinsgame_20a.webp'
+import celsiuscasinoImg from '../assets/celsiuscasino_20.webp'
+import bcgameImg from '../assets/bcgames_20.webp'
+import cryptowinsImg from '../assets/cw_20.webp'
+import cryptoslotsImg from '../assets/cryptoslots.webp'
 
 const dropdownItems = {
   buy: [
     {
-      imgSrc: '/assets/moonpay_20.webp',
+      imgSrc: moonpayImg,
       title: 'MoonPay',
       description:
         'Buy crypto with our non-custodial and fully decentralized platform.',
@@ -16,7 +25,7 @@ const dropdownItems = {
         '15M+ users trust MoonPay. Checkout with your preferred payment method.',
     },
     {
-      imgSrc: '/assets/cons_20.webp',
+      imgSrc: metamaskImg,
       title: 'MetaMask',
       description: 'Manage your web3 everything with MetaMask Portfolio.',
       cta: 'Try Now!',
@@ -24,7 +33,7 @@ const dropdownItems = {
         "Ready to onboard to Ethereum? With MetaMask Portfolio, you're in control.",
     },
     {
-      imgSrc: '/assets/nexo.webp',
+      imgSrc: nexoImg,
       title: 'Nexo',
       description:
         'Buy crypto and start earning up to 16% interest automatically.',
@@ -35,7 +44,7 @@ const dropdownItems = {
   ],
   exchange: [
     {
-      imgSrc: '/assets/cons_20.webp',
+      imgSrc: metamaskImg,
       title: 'MetaMask',
       description:
         'Meet MetaMask Portfolio - your key to getting more out of web3.',
@@ -44,7 +53,7 @@ const dropdownItems = {
         'Ready to simplify your web3 experience? Try the all-in-one web3 app trusted by millions worldwide.',
     },
     {
-      imgSrc: '/assets/cexio_20.svg',
+      imgSrc: cexioImg,
       title: 'CEX.IO',
       description: 'Claim Your Mystery Box For A Guaranteed Crypto Prize',
       cta: 'CLAIM NOW',
@@ -54,7 +63,7 @@ const dropdownItems = {
   ],
   play: [
     {
-      imgSrc: '/assets/coinsgame_20a.webp',
+      imgSrc: coinsgameImg,
       title: 'Сoins.game',
       description: '100 free spins for registration.',
       cta: 'Spin now!',
@@ -62,7 +71,7 @@ const dropdownItems = {
         'Everyday giveaways up to 100 ETH, Lucky Spins. Deposit BONUS 300% and Cashbacks!',
     },
     {
-      imgSrc: '/assets/celsiuscasino_20.webp',
+      imgSrc: celsiuscasinoImg,
       title: 'Celsius Casino',
       description: '- $400 Freespins - Instant Withdraw - No KYC - 200% Bonus.',
       cta: 'Spin Now!',
@@ -70,7 +79,7 @@ const dropdownItems = {
         '9 years old Licensed Crypto Casino, Instant Withdraw 24/7, 6000+ Slots available, Paypal Deposit, Instant Live Support 24/7, 30% Rakeback.',
     },
     {
-      imgSrc: '/assets/bcgames_20.webp',
+      imgSrc: bcgameImg,
       title: 'BC.GAME',
       description: '- The Best ETH Casino',
       cta: 'Claim Now!',
@@ -80,7 +89,7 @@ const dropdownItems = {
   ],
   gaming: [
     {
-      imgSrc: '/assets/bcgames_20.webp',
+      imgSrc: bcgameImg,
       title: 'BC.GAME',
       description: '- The Best ETH Casino',
       cta: 'Claim Now!',
@@ -88,7 +97,7 @@ const dropdownItems = {
         '5000+ Slots & Live Casino Games, 50+cryptos. Register with Etherscan and get 760% deposit bonus. Win Big$, withdraw it fast.',
     },
     {
-      imgSrc: '/assets/cw_20.webp',
+      imgSrc: cryptowinsImg,
       title: 'CryptoWins',
       description: '200% Welcome Bonus – Supercharge Your Crypto Up to 4 BTC!',
       cta: 'Claim Now!',
@@ -96,7 +105,7 @@ const dropdownItems = {
         'Play 100s of games anonymously with all major cryptos. Join CryptoWins & start winning!',
     },
     {
-      imgSrc: '/assets/cryptoslots.webp',
+      imgSrc: cryptoslotsImg,
       title: 'CryptoSlots',
       description: 'Play & Get 25 Free Spins at CryptoSlots',
       cta: 'Play Now',
@@ -105,6 +114,7 @@ const dropdownItems = {
     },
   ],
 }
+
 const ItemsContainer = () => {
   const [openDropdown, setOpenDropdown] = useState(null)
 

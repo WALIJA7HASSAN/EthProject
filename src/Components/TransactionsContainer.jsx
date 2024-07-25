@@ -5,6 +5,7 @@ import { TbBulb } from 'react-icons/tb'
 import Overview from './Overview.jsx'
 import Log from './Log.jsx'
 import State from './State.jsx'
+import classNames from 'classnames'
 
 const TransactionsContainer = () => {
 
@@ -29,31 +30,40 @@ const TransactionsContainer = () => {
       >
         <div className="flex gap-2">
           <button
-            className={`bg-gray-200 px-2 py-1  rounded-md text-sm ${
-              tab === 'overview' ? 'bg-customBlue text-white' : ''
-            }
-             `}
+            className={classNames('bg-gray-200 px-2 py-1 rounded-md text-sm', {
+              'text-white': tab === 'overview',
+            })}
+            style={{
+              backgroundColor: tab === 'overview' ? '#0784c3' : '#e5e7eb', 
+            }}
             onClick={() => setTab('overview')}
           >
             Overview
           </button>
           <button
-            className={`bg-gray-200 px-2 py-1  rounded-md text-sm ${
-              tab === 'logs' ? 'bg-customBlue text-white' : ''
-            }  `}
+            className={classNames('bg-gray-200 px-2 py-1 rounded-md text-sm', {
+              'text-white': tab === 'logs',
+            })}
+            style={{
+              backgroundColor: tab === 'logs' ? '#0784c3' : '#e5e7eb',
+            }}
             onClick={() => setTab('logs')}
           >
             Logs(1)
           </button>
           <button
-            className={`bg-gray-200 px-2 py-1  rounded-md text-sm ${
-              tab === 'state' ? 'bg-customBlue text-white' : ''
-            }   `}
+            className={classNames('bg-gray-200 px-2 py-1 rounded-md text-sm', {
+              'text-white': tab === 'state',
+            })}
+            style={{
+              backgroundColor: tab === 'state' ? '#0784c3' : '#e5e7eb',
+            }}
             onClick={() => setTab('state')}
           >
             State
           </button>
         </div>
+        
         <div>
           <button className="flex bg-white border p-2 rounded-md text-sm hover:bg-gray-200">
             <FaListCheck />

@@ -36,7 +36,7 @@ const State = () => {
                 <td className="py-2 px-4"></td>
                 <td className="py-2 px-4">
                   <p className="space-x-3">
-                    <span className="text-customBlue hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-full px-2">
+                    <span className="text-customBlue hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-full px-2">
                       0x95222290...5CC4BAfe5
                     </span>
                     <span className="text-xs bg-gray-100 px-2 py-1 rounded-md border border-gray-200 font-semibold ">
@@ -55,7 +55,7 @@ const State = () => {
               <tr className="hover:bg-gray-100 border-b">
                 <td className="py-2 px-4"></td>
                 <td className="py-2 px-4">
-                  <p className="text-customBlue hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-full px-2 w-fit flex flex-wrap place-items-center gap-1">
+                  <p className="text-customBlue hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed  hover:rounded-full px-2 w-fit flex flex-wrap place-items-center gap-1">
                     0x9a515df6...79fa3CCcf
                   </p>
                 </td>
@@ -84,7 +84,7 @@ const State = () => {
                 </td>
                 <td className="py-2 px-4">
                   <h5>
-                    <span className="text-customBlue hover:bg-orange-100 hover:border hover:border-orange-500 hover:rounded-full px-2">
+                    <span className="text-customBlue hover:bg-orange-100 hover:border hover:border-orange-500  hover:border-dashed hover:rounded-full px-2">
                       0xdAC17F95...13D831ec7
                     </span>
                     <span className="text-customBlue inline-flex items-center ml-2">
